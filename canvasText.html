@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvasText</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oCanvas = document.getElementById("myCanvas");
+            var oContext = oCanvas.getContext("2d");
+
+            oContext.fillStyle = "#000000";
+            oContext.strokeStyle = "#000000";
+			oContext.lineWidth=0;
+            oContext.font = "bold 40px '微软雅黑'";
+            oContext.textBaseline = "top";
+            oContext.textAlign = "start";
+            oContext.strokeText("Next Year Marks the EU's 50th Anniversary of the Treaty", 40, 30);
+            oContext.font = "bold 15px '微软雅黑'";
+            oContext.fillText("[A] What else might be wrong? Money? Germany’s spending per pupil is a bit below the OECD average. But so is Britain’s and British pupils,", 80, 100);
+            oContext.fillText("to the surprise of many there, figured in the top ten in all the tests. The organisation of schooling, then? That would be hard to judge.Education", 80, 120);
+ oContext.fillText("the responsibility of the country’s 16 distinct Lander (states), and the various systems they use range from the highly selective to the fully", 80, 140);
+ oContext.fillText("comprehensive.", 80, 160);
+ 
+ oContext.fillText("[B] There is more of a clue, perhaps, to be found in the teaching force itself. Germany’s school-teachers are relatively well paid, but they are", 80, 200);
+ oContext.fillText("irement on health grounds. Inevitably, the quality of teaching suffers.", 80, 220);
+ 
+
+ oContext.fillText("[C] “Shocking”, “scandalous” and “catastrophic”, politicians, parents and educators have wailed in unison. And beneath the average figu", 80, 260);
+ oContext.fillText("res lie others even more shocking for Germany’s deeply democratic burghers: evidence of a wide gap —one of the widest found by the OEC.", 80, 280);
+ 
+ oContext.fillText("[D] How can this be? Whatever else, Germany is famous for its thoroughness. Its technical education was one of the wonders of the 19th century,", 80, 320);
+ oContext.fillText("and long after. What has gone wrong?", 80, 340);
+ 
+ oContext.fillText("[E] The shame of it! In a new study of school pupils’ performance by the OECD, Germany, the world’s third-biggest economic power, the―land", 80, 380);
+ oContext.fillText("of poets and thinkers‖, was  ranked  a  miserable  21st  out  of  31  countries  for  the  reading  abilities  of  its 15-year-olds,", 80, 400);
+			
+			
+			oContext.font = "bold 25px '微软雅黑'";
+			 oContext.fillText("将A-E段落进行排序", 80, 480);
+			 
+			oContext.strokeStyle = "#b1830d";
+			oContext.lineWidth=10;
+			oContext.strokeRect(10,10,1200,70)
+/*
+            window.location=oCanvas.toDataURL("image/jpeg");
+*/
+        }
+    </script>
+</head>
+<body>
+<canvas id="myCanvas" width="1800px" height="2300px"></canvas>
+</body>
+</html>

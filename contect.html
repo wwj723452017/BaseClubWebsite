@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>联系我们</title>
+			<link rel="stylesheet" href="css/owl.carousel.css" />
+			<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+			<link rel="stylesheet" href="css/bootstrap.min.css" />
+			<link rel="stylesheet" href="css/t_style.css" />
+			<link rel="stylesheet" href="css/t_media_style.css" />
+			<style type="text/css">
+			body{background-image: url(./img/联系我们背景/绿色.jpg);}
+			</style>
+	</head>
+	<body>
+	<!-- 加入社团 -->
+	<div class="h_t5_bg fix">
+	    <div class="container auto fix">
+	        <div class="row fix">
+	            <div class="a_list col-md-6 fix">
+	                <form action="" name="UbbFm" method="get" onSubmit="return CheckValid();">
+	                    <div class="a_list_1 fix">
+	                        <img src="img/图标/6.png" width="23" height="24" alt="姓名" />
+	                        <input type="text" class="a_txt" placeholder="姓名" id="sname" name="snames" />
+	                    </div>
+	                    <div class="a_list_1 fix">
+	                        <img src="img/图标/2.png" width="23" height="24" alt="手机" />
+	                        <input type="text" class="a_txt" placeholder="手机" id="sname" name="jmsj" />
+	                    </div>
+	                    <div class="a_list_1 fix">
+	                        <img src="img/图标/3.png" width="23" height="24" alt="邮箱" />
+	                        <input type="text" class="a_txt" placeholder="邮箱" id="sname" name="jmyx" />
+	                    </div>
+	                    <div class="a_list_1 fix">
+	                        <img src="img/图标/4.png" width="23" height="24" alt="学院" />
+	                        <label class="contacts">
+	                    							 <strong>学院：</strong>
+	                    							   <select name="college" size="1" id="college">
+	                    								   <option value="1">计算机学院</option>
+	                    								   <option value="2">外国语学院</option>
+	                    								   <option value="3">信息学院</option>
+	                    								   <option value="4">机械学院</option>
+	                    								   <option value="5">土木工程学院</option>
+	                    								   <option value="6">药学院</option>
+	                    								   <option value="7">健行学院</option>
+	                    							   </select>
+	                    	</label>
+						</div>
+	                    <div class="a_list_2 fix">
+	                        <img src="img/图标/8.png" width="23" height="24" alt="留言内容" />
+	                        <textarea placeholder="留言内容" name="content"></textarea>
+	                    </div>
+	                    <input type="submit" class="a_but1" value="提交" />
+	                </form>
+	            </div>
+	            <div class="a_pin col-md-6 fix">
+	                <h3>联系我们</h3>
+	                <p>base外语俱乐部是浙江工业大学外国语学院开设的一个英语社团，其目的在于锻炼学生的口语及思辨能力。</p>
+	                <p>欢迎提出对社团的各种建议！想要加入社团的同学们也可以直接填表哦！</p>
+	                <img src="img/二维码.jpg" width="135" height="135" alt="公众号二维码" />
+	                <h4>联系邮箱：723452017@qq.com</h4>
+	                <h4>联系地址：杭州市西湖区留下街道浙江工业大学屏峰校区</h4>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	</body>
+	<script>
+	      function CheckValid(){
+	        if (document.UbbFm.snames.value==""){
+			alert("请填写姓名！");
+			return false;
+			document.UbbFm.snames.focus();
+			}
+			if (document.UbbFm.jmsj.value.length != 11 || document.UbbFm.jmsj.value.match(/^[1]([3][0-9]{1}|[5][0-3]{1}|[5][5-9]{1}|[8][0-9]{1}|77)[0-9]{8}$/)==null){
+			alert("请填写正确的手机号！");
+			return false;
+			document.UbbFm.jmsj.focus();
+			}
+			if (document.UbbFm.jmyx.value==""){
+			alert("请填写您的邮箱！");
+			return false;
+			document.UbbFm.jmyx.focus();
+			}
+			if (document.UbbFm.jmqy.value==""){
+			alert("请选择学院");
+			return false;
+			document.UbbFm.jmqy.focus();
+			}
+			if (document.UbbFm.content.value==""){
+			alert("请在以下区域输入您的留言！");
+			return false;
+			document.UbbFm.content.focus();
+			}
+	}
+	</script>	
+</html>

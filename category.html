@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>单词页面</title>
+    <meta name="keywords" content="Base外语俱乐部" />
+    <meta name="description" content="浙江工业大学外国语学院下属社团" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    
+    <link href="css/css.css" rel="stylesheet"/>
+    <link href="css/media.css" rel="stylesheet"/>
+    <link href="css/index.css" type="text/css"/>
+    <link href="css/jquery.panorama.css" type="text/css"/>
+    <link href="css/cooker.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/docs.css" />
+    <link href="css/drawer.min.css" rel="stylesheet"/>
+    
+     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- 首页单独样式 -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/t_style.css" />
+    <link rel="stylesheet" href="css/t_media_style.css" />
+    
+    <style type="text/css">
+    .a1_bg{background: url(img/背景/6.png) bottom no-repeat;}
+    </style>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/jquery.drawer.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){  
+            //获取全部的图书商品
+            var oDrag=document.getElementsByName("piclist");
+            //遍历每一个图书商品
+            for(var iCv=0;iCv<oDrag.length;iCv++){
+                //为每一个图书商品添加被拖放元素的dragstart事件行为
+                oDrag[iCv].addEventListener("dragstart",function(e){
+                            var oDtf=e.dataTransfer;
+                            oDtf.setData("text/html",addCart(this.title,this.alt));
+                        },false);
+            }
+            var oCart=document.getElementById("ulcart");
+            //添加目标元素的drop事件行为
+            oCart.addEventListener("drop",function(e){
+                        var oDtf=e.dataTransfer;
+                        var sHtml=oDtf.getData("text/html");
+                        oCart.innerHTML+=sHtml;
+                        e.preventDefault();
+                        e.stopPropagation();
+                    },false);
+            //添加页面的dragover事件行为
+            document.ondragover=function(e){
+                e.preventDefault();
+            }
+            //添加页面drop事件行为
+            document.ondrop=function(e){
+                e.preventDefault();
+            }
+        }
+        //自定义向购物车中添加记录的函数
+        function addCart(a,b){
+            var sHtml="<li class='lic'>";
+            sHtml+="<span>"+a+"</span>";
+            sHtml+="<span>"+b+"</span>";
+            sHtml+="</li>";
+            return sHtml;
+        }
+    </script>
+
+</head>
+
+
+<body class="drawer drawer-right index">
+	
+<header >
+    <div class="drawer-toggle drawer-hamberger"><span></span></div>
+    <div class="drawer-main drawer-default">
+        <nav id="nav" class="drawer-nav" role="navigation">
+        <div class="drawer-brand">
+            <a href="/">Base</a>
+        </div>
+        <ul class="drawer-nav-list">
+            <li><a href="index.html">首页</a></li>
+            <li class="drop">
+            <a >社团风采</a>
+            <ul class="drop-down">
+                <li class="drop-down_1">
+                <a href="activity1.html">圣诞庆典</a>
+                </li>
+                <li class="drop-down_2">
+                <a href="activity1.html">周年庆典</a>
+                </li>
+                <li class="drop-down_3">
+                <a href="activity1.html">学长讲座</a>
+                </li>
+            </ul>
+            </li>
+            <li class="drop">
+            <a href="contect.html" target="_blank">联系我们</a>
+            <ul class="drop-down">
+            </ul>
+            </li>
+        </ul>
+        <div class="nav_ewm">
+            <img src="img/二维码.jpg" width="135" height="135" alt="官方二维码"/>
+        </div>
+        </nav>
+    </div>
+</header><script>
+    $(function(){
+        $('.drop').click(function(){
+            $(this).find('.drop-down').toggle();
+        })
+    })
+</script>
+    <!-- top -->
+    <div class="h_top fix">
+      <img src="./img/Base.jpg" alt="头图"/>
+    </div>
+	 <div class="a1_bg">
+	  <div class="h_t1 container auto fix">
+	      <div class="h_t1_t fix">
+	          <h3>选择&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单词</h3>
+	          <span>下面哪个单词是你不认识的呢？</span>
+	      </div>
+	      <div class="row">
+	          <div class="h_t1_m col-md-10 col-md-offset-1 fix">	
+				 <p class="h_t1_p1">
+					 <section class="piclist">
+					     <ul>
+					         <li><a href=""><img src="img/单词/1.png" id="img01" name="piclist" draggable="true" alt="n.种族划分" title="ethnicity"></a></li>
+					         <li><a href=""><img src="img/单词/2.png" id="img02" name="piclist" draggable="true" alt="adj. 匿名的" title="anonimous"></a></li>
+					         <li><a href=""><img src="img/单词/3.png" id="img03" name="piclist" draggable="true" alt="v. 优先处理" title="prioritising"></a></li>
+					      </ul>
+					     <ul>
+					         <li><a href=""><img src="img/单词/4.png" id="img04" name="piclist" draggable="true" alt="n. 偏见" title="prejudice"></a></li>
+					         <li><a href=""><img src="img/单词/5.png" id="img05" name="piclist" draggable="true" alt="v. 促进" title="facilitate"></a></li>
+					         <li><a href=""><img src="img/单词/6.png" id="img06" name="piclist" draggable="true" alt="adj. 热情友好的" title="hospitable"></a></li>
+					     </ul>
+					 </section>
+				 </p>
+				 <p class="h_t1_p2">
+				 					 <div id="pagebar">
+				 					     <a href="#" class="arrow">上一页</a>
+				 					     <a href="#">1</a>
+				 					     <a href="#">2</a>
+				 					     <a href="#">3</a>
+				 					     <a href="#">4</a>
+				 					     <a href="#">5</a>
+				 					     <a href="#">6</a>
+				 					     <a href="#">7</a>
+				 					     <a href="#">8</a>
+				 					     <a href="#">9</a>
+				 					     <a href="#">10</a>
+				 					     <a href="#" class="arrow">下一页</a>
+				 					 </div>
+				 </p>
+				 
+				 <p class="h_t1_p1">
+					 <section>
+					     <ul id="ulcart">
+					         <li class="lit">
+					         <span>单词名</span>
+					         <span>意思</span>
+					         </li>
+					     </ul>
+					 </section>
+				 </p>
+				 
+				 
+
+	          </div>
+	      </div>
+	  </div>
+	  </div>
+	 
+	 
+	 
+
+    <!-- footer -->
+    <div class="a_fot1 fix">
+        <p>邮箱：723452017@qq.com</p>
+        <p>地址：浙江省杭州市西湖区留下街道浙江工业大学屏峰校区</p>
+        <div class="a_f2 fix">
+		<div style="width:900px; margin:0 auto 5px;">
+            <span>友情链接：</span>
+			<a href="http://www.zjut.edu.cn/" target="_blank">浙江工业大学</a> 
+			<span>|</span>
+						<a href="https://visuwords.com/" target="_blank">Visuwords</a> 
+			<span>|</span>
+						<a href="https://www.booklistonline.com/?AspxAutoDetectCookieSupport=1" target="_blank">Booklist Online</a> 
+			<span>|</span>
+						<a href="https://www.etymonline.com/" target="_blank">Etymonline</a> 
+			<span>|</span>
+						<a href="http://video.mit.edu" target="_blank">MIT</a> 
+			<span>|</span>
+									</div>
+        </div>
+    </div>
+    <div class="a_fot2 fix">
+        欢迎加入浙江工业大学Base外语俱乐部 &#169;2021 作者：王雯婧.
+    </div>
+</body>
+</html>
